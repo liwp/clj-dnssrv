@@ -23,7 +23,7 @@
   [& [{:keys [cache-lookups lookup-timeout-ms metered retain-data]
        :or {cache-lookups false
             lookup-timeout-ms 5000
-            metered false
+            metered nil
             retain-data false}}]]
   (-> (DnsSrvResolvers/newBuilder)
       (.cachingLookups cache-lookups)
@@ -40,8 +40,8 @@
 
 (defn- host-and-name->map
   [hn]
-  {:host (.getHostText hn)
-   :port (.getPort hn)})
+  {:host (.host hn)
+   :port (.port hn)})
 
 (defn lookup
   "Lookup the SRV records for the given fully qualified domain name

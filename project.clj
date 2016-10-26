@@ -7,8 +7,8 @@
         :url "https://github.com/liwp/corax"}
   :deploy-repositories [["releases" :clojars]]
 
-  :dependencies [[org.clojure/clojure "1.6.0"]
-                 [com.spotify/dns "2.2.0"]]
+  :dependencies [[org.clojure/clojure "1.8.0"]
+                 [com.spotify/dns "3.1.4"]]
 
   :profiles {:dev {:plugins [[jonase/eastwood "0.1.4"]
                              [listora/whitespace-linter "0.1.0"]]
